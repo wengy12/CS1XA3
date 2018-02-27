@@ -1,0 +1,37 @@
+-Informs you if you're local repo is up to date with the remote repo
+    if everything is up to date
+        return "Already up-to-date."
+    else
+        do "git pull" and make it up to date
+
+-Puts all uncommited changes in a file changes.log
+    do "git status" and output redirect to changes.log
+
+-Puts each line from every file of your project with the tag #TODO into a file todo.log
+    do "search all files with #TODO" and put the filenames in todo.log
+
+-Checks all haskell files for syntax errors and puts the results into error.log
+    do "compile all .hs files" and redirect errors to error.log
+
+//I did use the internet to do all stuffs above, but all of them are just general references and I didn't copy-paste so I believe that it is okay without referenses
+
+-Add at least one feature of your own design
+    do "compile all .hs file with special option that will create .tix file every time when you run your haskell code"
+    do "read all existing .tix files and put short text report in hpc.log in format "file_path+file_name /n "actual report" " "
+    /*
+    Actually, doing research about what I can do, I fount something very interesting, called "Haskell program coverage"
+    https://wiki.haskell.org/Haskell_program_coverage#Downloading
+    This is powerful tool that tells you a lot about how good is your code
+    so first about installation
+    if you already have cabal, so just
+    >>cabal install hpc
+    if not... https://wiki.haskell.org/Cabal-Install <- this will help you
+    now it'll install hpc in your local repo
+    after this, just run ProjectAnalyse.sh and it'll compile all your FILE.hs into FILE.hs.exe
+    every time you run your FILE.hs.exe, it'll automatically create a file FILE.hs.exe.tix in the same directory
+    now, you can either run ProjectAnalyse.sh again, it'll do what it has to do (put all code report in file hpc.log)
+    or, if you don't want to do it for all files and just want to have your short report on your screen, you can for example use command:
+    >>hpc report FILE.hs.exe.tix
+    this tool is much more powerful than just give you short report, is also can actually highlight parts in different color in HTML output
+    but I cant understand how to open html files on ssh server so I skipped this, but you can try on your own computer
+    */
